@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+  </head>
+  <body>
+    <script src="guardiangrid.js"></script>
+    <script>
+      document.addEventListener('keydown', ({ code }) => {
+        // console.log(code)
+        switch (code) {
+          case 'KeyG': setClickMode('GUARDIAN_PLACE'); break;
+          case 'KeyL': setClickMode('LINK'); break;
+          case 'KeyO': setClickMode('OBSTACLE'); break;
+          case 'ArrowUp':
+          case "KeyW":
+            moveLinkUp(); break;
+          case 'ArrowDown':
+          case "KeyS":
+            moveLinkDown(); break;
+          case 'ArrowLeft':
+          case "KeyA":
+            moveLinkLeft(); break;
+          case 'ArrowRight':
+          case "KeyD":
+            moveLinkRight(); break;
+          default: break;
+        }
+      })
+    </script>
+  </body>
+</html>
